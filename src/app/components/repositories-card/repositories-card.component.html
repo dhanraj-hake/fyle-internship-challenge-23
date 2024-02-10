@@ -1,0 +1,11 @@
+<div class="border-2 h-40 border-black flex flex-col p-4 justify-between overflow-hidden">
+    <p class="font-bold text-2xl text-blue-600/100">{{repositorie.name}}</p>
+    <p class="font-medium">{{repositorie?.description?.slice(0,120)}}</p>
+    <div class="flex gap-4">
+        <button *ngFor="let topic of repositorie.topics"
+            class="h-8 bg-blue-500 hover:bg-blue-700 text-white font-medium py-1 px-2 rounded">
+            {{topic}}
+        </button>
+    </div>
+
+</div>

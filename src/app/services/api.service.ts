@@ -16,4 +16,8 @@ export class ApiService {
   }
 
   // implement getRepos method by referring to the documentation. Add proper types for the return type and params 
+
+  getRepos(githubUsername :string, pageSize:number, pageNumber : number){
+    return this.httpClient.get(`https://api.github.com/users/${githubUsername}/repos?per_page=${pageSize}&page=${pageNumber}`);
+  }
 }

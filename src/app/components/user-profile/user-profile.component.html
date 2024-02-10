@@ -1,0 +1,32 @@
+<div class="mb-2.5">
+    <div class="flex h-52 w-[100%] gap-x-5">
+        <div class="grid w-72 place-items-center ">
+            <div class="w-42 p-1  border rounded-full">
+                <img class="w-40 rounded-full" [src]="userProfile?.avatar_url" alt="">
+            </div>
+        </div>
+        <div class=" flex-auto flex flex-col justify-center h-[100%]">
+            <h1 class="font-bold my-1.5 text-2xl"> {{userProfile?.name}}</h1>
+            <p class="font-medium my-1.5">{{userProfile?.bio}}</p>
+            <div class="flex">
+                <svg class="h-8 w-8 text-slate-900" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <p class="font-medium my-1.5"> {{userProfile?.location}}</p>
+            </div>
+
+            <p class="font-medium my-1.5">Twitter : https://twitter.com/{{userProfile?.twitter_username}}</p>
+        </div>
+    </div>
+    <div class="flex  gap-2 items-center">
+        <svg class="h-6 w-6 text-slate-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3" />
+            <line x1="8" y1="12" x2="16" y2="12" />
+        </svg>
+        <a href="{{userProfile?.html_url}}" target="_blank">{{userProfile?.html_url}}</a>
+    </div>
+</div>
